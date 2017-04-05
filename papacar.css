@@ -8,6 +8,32 @@ body, html {
     overflow: hidden;
 }
 
-canvas {
+#canvasesDiv {
+    position: relative;
+}
+
+#gameCanvas1 {
+    z-index: 1;
     position:absolute;
 }
+
+#gameCanvas2 {
+    z-index: 2;
+    position:absolute;
+}
+
+#gameCanvas3 {
+    z-index: 3;
+    position: absolute;
+}
+
+#gameCanvas4 {
+    z-index: 3;
+    position: absolute;
+    margin-left: 505px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
