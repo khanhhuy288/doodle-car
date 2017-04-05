@@ -1,33 +1,38 @@
-
-// ser color palette
+// turn color palette img to canvas
 var colorPalette = new Image();
-colorPalette.src = 'http://i.imgur.com/QLNAzoT.png';
+colorPalette.src = 'http://i.imgur.com/NdNOaKH.png';
 colorPalette.crossOrigin = "Anonymous";
-var canvas3 = document.getElementById('gameCanvas3');
+
+var canvas3 = document.getElementById('colorPalette');
 var canvasContext3 = canvas3.getContext('2d');
+
+// draw img on canvas
 colorPalette.addEventListener('load', function() {
     canvasContext3.drawImage(colorPalette, 0, 0);
     colorPalette.style.display = 'none';
 });
+
+// turn img on canvas to a color picker
 function pick(event) {
     var x = event.layerX;
     var y = event.layerY;
     var pixel = canvasContext3.getImageData(x, y, 1, 1);
     var data = pixel.data;
-    blueCar.paintColor = 'rgba(' + data[0] + ', ' + data[1] +
-        ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-    $("gameCanvas4").css("background-color", blueCar.paintColor);
 
+    // set car new paint color
+    madCar.paintColor = 'rgba(' + data[0] + ', ' + data[1] +
+        ', ' + data[2] + ', ' + (data[3] / 255) + ')';
+
+    // change the current paint color display
+    document.getElementById("currentPaintColor").style.backgroundColor = madCar.paintColor;
 }
+
+// click color palette to change paint color
 canvas3.addEventListener('click', pick);
 
 
 // set car pics
 var carPic = document.createElement("img");
-var otherCarPic = document.createElement("img");
-
-// store track pics
-var trackPics = [];
 
 // set automatically in loadImages()
 var picsToLoad;
@@ -35,8 +40,7 @@ var picsToLoad;
 function loadImages() {
     // fill the image list with image objects
     var imageList = [
-        {varName: carPic, theFile: "player1car.png"},
-        {varName: otherCarPic, theFile: "player2car.png"}
+        {varName: carPic, theFile: "car.png"}
     ];
 
     picsToLoad = imageList.length;

@@ -7,11 +7,13 @@ const MIN_SPEED_TO_TURN = 0.5;
 function Car(whichImage) {
 	this.x = canvasWidth/2;
 	this.y = canvasHeight/2;
-    this.ang = -Math.PI / 2;
+	// point car to north east
+    this.ang = -Math.PI/3;
     this.speed = 0;
     this.myCarPic = whichImage;
 
-    this.paintColor = "black";
+    // set default paint color
+    this.paintColor = "#363F45";
 
 	// set default keyHeld to false
     this.keyHeld_Gas = false;
@@ -77,7 +79,7 @@ function Car(whichImage) {
     this.paint = function () {
         if (this.keyHeld_Paint){
             // paint the trail
-            colorCircle(this.x, this.y, 10, this.paintColor);
+            colorCircle(this.x, this.y, 11, this.paintColor);
         }
     }
 

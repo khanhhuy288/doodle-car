@@ -11,6 +11,7 @@ function colorRect(topLeftX,topLeftY, boxWidth,boxHeight, fillColor) {
     canvasContext1.fillRect(topLeftX,topLeftY, boxWidth,boxHeight);
 }
 
+// draw stroke on draw layer
 function colorCircle(centerX,centerY, radius, fillColor) {
     canvasContext2.fillStyle = fillColor;
     canvasContext2.beginPath();
