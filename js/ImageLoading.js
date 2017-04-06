@@ -1,7 +1,8 @@
 // turn color palette img to canvas
 var colorPalette = new Image();
-colorPalette.src = 'http://i.imgur.com/NdNOaKH.png';
 colorPalette.crossOrigin = "Anonymous";
+colorPalette.src = 'http://i.imgur.com/NdNOaKH.png';
+
 
 var canvas3 = document.getElementById('colorPalette');
 var canvasContext3 = canvas3.getContext('2d');
