@@ -13,23 +13,28 @@ body, html {
 }
 
 #gameCanvas1 {
-  position:absolute;
-  z-index: 1;
+  position:absolute;
+
+  z-index: 4;
+  pointer-events: none;
 }
 
 #gameCanvas2 {
-  position:absolute;
+  position:absolute;
+
   z-index: 2;
 }
 
 #colorPalette {
-  position: absolute;
+  position: absolute;
+
   z-index: 3;
   left: 40px;
 }
 
 #currentPaintColor {
-  position: absolute;
+  position: absolute;
+
   z-index: 3;
   left: 0;
 
@@ -41,7 +46,8 @@ body, html {
 }
 
 #instruction {
-  position: absolute;
+  position: absolute;
+
   z-index: 3;
   top: 10px;
   right: 0;
@@ -69,7 +75,8 @@ div div {
 }
 
 #showHideButton {
-  position: absolute;
+  position: absolute;
+
   z-index: 3;
   right: 0;
 

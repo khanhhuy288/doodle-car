@@ -44,8 +44,8 @@ function imageLoadingDoneSoStartGame() {
 }
 
 function updateAll() {
-  // put screen on first layer
-  colorRect(0, 0, canvasWidth, canvasHeight, 'white');
+  // clear car canvas (transparent)
+  canvasContext1.clearRect(0, 0, canvasWidth, canvasHeight);
 
   // put screen on second layer
   madCar.move();
