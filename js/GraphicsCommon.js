@@ -19,6 +19,17 @@ function colorCircle(centerX, centerY, radius, fillColor) {
   canvasContext2.fill();
 }
 
+// draw line on draw layer
+function colorLine(x1, y1, x2, y2, lineWidth, fillColor) {
+  canvasContext2.strokeStyle = fillColor;
+  canvasContext2.lineWidth = lineWidth;
+  canvasContext2.lineCap = 'round';
+  canvasContext2.beginPath();
+  canvasContext2.moveTo(x1, y1);
+  canvasContext2.lineTo(x2, y2);
+  canvasContext2.stroke();
+}
+
 function colorText(showWords, textX, textY, fillColor) {
   canvasContext1.fillStyle = fillColor;
   canvasContext1.fillText(showWords, textX, textY);
